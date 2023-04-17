@@ -79,8 +79,8 @@ REST_FRAMEWORK = {
      'rest_framework.filters.OrderingFilter',]
 }
 
-CELERY_BROKER_URL =config('REDIS_URL') 
-CELERY_RESULT_BACKEND = config('REDIS_URL')
+# CELERY_BROKER_URL =config('REDIS_URL') 
+# CELERY_RESULT_BACKEND = config('REDIS_URL')
 
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 

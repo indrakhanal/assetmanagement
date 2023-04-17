@@ -8,7 +8,7 @@ services:
     ports:
       - 8000:8000
     env_file:
-      - ./.env.dev
+      - ./.env
     depends_on:
       - db
   db:
@@ -16,24 +16,24 @@ services:
     volumes:
       - postgres_data_ams:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=amsuser
-      - POSTGRES_PASSWORD=amsuser
-      - POSTGRES_DB=ams
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=assetmgmt
   
-  redis:
-    image: redis:alpine
-  celery:
-    restart: always
-    build:
-      context: .
-    command: celery -A config_pannel worker -l info
-    volumes:
-      - ./:/usr/src/asset-management-tool/
-    env_file:
-      - ./.env.dev
-    depends_on:
-      - db
-      - redis
-      - web
+  #redis:
+    #image: redis:alpine
+  #celery:
+    #restart: always
+    #build:
+      #context: .
+    #command: celery -A config_pannel worker -l info
+    #volumes:
+     # - ./:/usr/src/asset-management-tool/
+    #env_file:
+     # - ./.env.dev
+    #depends_on:
+     # - db
+      #- redis
+      #- web
 volumes:
   postgres_data_ams:

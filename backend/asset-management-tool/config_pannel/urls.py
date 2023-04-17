@@ -12,6 +12,5 @@ urlpatterns = [
      path('scheme-user/update/<int:pk>/', UpdateWaterSchemeUserView.as_view(), name='scheme-user-update'),
      path('scheme-user/delete/<int:pk>/', deleteUser, name='scheme-user-delete'),
      path('privacy-policy/', privacy_policy, name='privacy_policy'),
-
      path('notf-test/', test_notif, name = 'test-notf'),
 ]
