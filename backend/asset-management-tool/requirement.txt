@@ -47,7 +47,7 @@ msgpack==1.0.2
 ndg-httpsclient==0.5.1
 nepali-datetime==1.0.7
 packaging==21.0
-Pillow==8.3.2
+Pillow==10.2.0
 prompt-toolkit==3.0.20
 proto-plus==1.19.5
 protobuf==3.19.0
