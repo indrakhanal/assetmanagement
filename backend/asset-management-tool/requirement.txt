@@ -37,7 +37,7 @@ googleapis-common-protos==1.53.0
 grpcio==1.39.0
 httplib2==0.20.1
 humanize==3.11.0
-idna==3.2
+idna==3.7
 inflection==0.5.1
 itypes==1.2.0
 Jinja2==3.0.1
